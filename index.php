@@ -62,7 +62,7 @@ if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']) {
 </head>
 <body>
   <div class="container">
-        <h1 class="sixtyfour-uniquifier">Juego del Ahorcado</h1>
+    <h1 class="sixtyfour-uniquifier">Juego del Ahorcado</h1>
     <p class="meta">Adivina la palabra antes de quedarte sin vidas.</p>
 
     <p class="secret"><?php echo $_SESSION['letras_acertadas']; ?></p>

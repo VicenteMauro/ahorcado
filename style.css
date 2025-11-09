@@ -3,7 +3,7 @@
   --card: #111827;
   --text: #e5e7eb;
   --accent: #04fd29;
-  --danger: #ef4444;
+  --danger: #ef5e44;
 }
 
 * { box-sizing: border-box; }
@@ -48,11 +48,28 @@ button {
   padding: 10px 14px; border: none; border-radius: 8px;
   background: var(--accent); color: var(--danger); font-weight: 600; cursor: pointer;
 }
+.button {
+  padding: 10px 14px; border: none; border-radius: 8px;
+  background: var(--accent); color: var(--danger); font-weight: 600; cursor: pointer;
+}
 button:hover { filter: brightness(1.1); }
-
+.button:hover { 
+  background: var(--danger); 
+  color: var(--accent);
+}
 .vidas { margin-top: 8px; }
 .vidas .low { color: var(--danger); font-weight: 700; }
 
 .usadas {
   margin-top: 14px; font-size: 14px; color: #9ca3af;
+}
+
+a {
+  text-decoration: none;
+  color:var(--accent);
+}
+
+a:hover {
+  text-decoration: none;
+  color:var(--danger);
 }
