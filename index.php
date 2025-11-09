@@ -52,16 +52,34 @@ if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']) {
 <head>
     <meta charset="UTF-8">
     <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Juego del Ahorcado</h1>
-    <p>Palabra secreta: <?php echo $_SESSION['letras_acertadas']; ?></p>
-    <p>Vidas restantes: <?php echo $_SESSION['vidas']; ?></p>
+  <div class="container">
+    <h1 class="sixtyfour-uniquifier">Juego del Ahorcado</h1>
+    <p class="meta">Adivina la palabra antes de quedarte sin vidas.</p>
+
+    <p class="secret"><?php echo $_SESSION['letras_acertadas']; ?></p>
+
+    <p class="vidas">
+      Vidas restantes:
+      <span class="<?php echo $_SESSION['vidas'] <= 2 ? 'low' : ''; ?>">
+        <?php echo $_SESSION['vidas']; ?>
+      </span>
+    </p>
+
     <form method="post">
         <label for="letra">Introduce una letra:</label>
         <input type="text" name="letra" id="letra" maxlength="1" required autofocus>
         <button type="submit">Adivinar</button>
     </form>
-    <p>Letras usadas: <?php echo implode(', ', $_SESSION['letras_usadas']); ?></p>
+
+    <p class="usadas">
+      Letras usadas: <?php echo implode(', ', $_SESSION['letras_usadas']); ?>
+    </p>
+  </div>
 </body>
 </html>
