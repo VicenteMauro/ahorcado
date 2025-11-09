@@ -56,10 +56,13 @@ if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']) {
     <meta charset="UTF-8">
     <title>Ahorcado</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-        <h1>Juego del Ahorcado</h1>
+        <h1 class="sixtyfour-uniquifier">Juego del Ahorcado</h1>
     <p class="meta">Adivina la palabra antes de quedarte sin vidas.</p>
 
     <p class="secret"><?php echo $_SESSION['letras_acertadas']; ?></p>
