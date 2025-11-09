@@ -2,7 +2,7 @@
 session_start();
 
 // Lista de palabras para el juego
-$palabras = ['elefante', 'jirafa', 'hipopotamo', 'rinoceronte', 'cocodrilo', 'camello', 'chimpance'];
+$palabras = ['elefante', 'jirafa', 'hipopotamo', 'rinoceronte', 'cocodrilo', 'camello', 'chimpance', 'jabali', 'murcielago', 'danta', 'jaguar', 'pantera', 'ballena', 'delfin'];
 
 // Inicializar el juego
 if (!isset($_SESSION['palabra'])) {
@@ -62,7 +62,7 @@ if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']) {
     <p>Vidas restantes: <?php echo $_SESSION['vidas']; ?></p>
     <form method="post">
         <label for="letra">Introduce una letra:</label>
-        <input type="text" name="letra" id="letra" maxlength="1" required>
+        <input type="text" name="letra" id="letra" maxlength="1" required autofocus>
         <button type="submit">Adivinar</button>
     </form>
     <p>Letras usadas: <?php echo implode(', ', $_SESSION['letras_usadas']); ?></p>
